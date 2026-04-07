@@ -3,10 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="True News - ข่าวจริง ไม่มี bullshit">
     <title>True News - ข่าวจริง ไม่มี bullshit</title>
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        * { 
+            margin: 0; 
+            padding: 0; 
+            box-sizing: border-box; 
+        }
         body {
             font-family: 'Segoe UI', system-ui, sans-serif;
             background: #0a0a0a;
@@ -44,14 +47,20 @@
             margin: 0 22px;
             font-weight: 500;
         }
-        nav a:hover { color: #ff3333; }
+        nav a:hover { 
+            color: #ff3333; 
+        }
 
-        .container { max-width: 1280px; margin: 40px auto; padding: 0 20px; }
+        .container { 
+            max-width: 1280px; 
+            margin: 40px auto; 
+            padding: 0 20px; 
+        }
 
         .hero {
             height: 460px;
             background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.85)), 
-                        url('https://picsum.photos/id/1015/1200/600') center/cover no-repeat;
+                        url('https://picsum.photos/id/1015/1200/600') center/cover;
             border-radius: 16px;
             display: flex;
             align-items: flex-end;
@@ -71,6 +80,84 @@
             grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
             gap: 28px;
         }
+
         .news-card {
             background: #141414;
-           
+            border-radius: 14px;
+            overflow: hidden;
+            transition: 0.3s ease;
+        }
+        .news-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 25px rgba(255, 51, 51, 0.2);
+        }
+        .news-card img {
+            width: 100%;
+            height: 210px;
+            object-fit: cover;
+        }
+        .news-card h3 {
+            padding: 18px 18px 8px;
+            font-size: 1.35rem;
+        }
+        .news-card p {
+            padding: 0 18px 20px;
+            color: #999;
+            font-size: 0.97rem;
+        }
+        footer {
+            text-align: center;
+            padding: 60px 20px 30px;
+            color: #555;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">TRUE NEWS</div>
+        <div class="subtitle">ข่าวจริง ไม่มี bullshit</div>
+    </header>
+
+    <nav>
+        <a href="#">หน้าแรก</a>
+        <a href="#">iPhone</a>
+        <a href="#">Android</a>
+        <a href="#">Gadgets</a>
+        <a href="#">iOS Update</a>
+        <a href="#">รีวิว</a>
+    </nav>
+
+    <div class="container">
+        <div class="hero">
+            <h1>iPhone 18 Ultra เตรียมเปิดตัว!<br>มาพร้อมชิป A20 Pro และดีไซน์ไร้พอร์ตชาร์จ 100%</h1>
+        </div>
+
+        <div class="news-grid">
+            <div class="news-card">
+                <img src="https://picsum.photos/id/1015/400/300" alt="iPhone Camera">
+                <h3>หลุดสเปกกล้อง iPhone 18</h3>
+                <p>Apple ซุ่มพัฒนาเลนส์ Liquid Lens รุ่นใหม่ ซูม Optical 20 เท่า พร้อมระบบ AI ลบคนเนียนกริบ</p>
+            </div>
+
+            <div class="news-card">
+                <img src="https://picsum.photos/id/201/400/300" alt="iOS">
+                <h3>iOS 20 เตรียมเปลี่ยน UI ครั้งใหญ่</h3>
+                <p>เน้น Generative AI มัลติทาสก์ใหม่ที่ลื่นไหล และ Siri ที่คุยเหมือนมนุษย์จริง</p>
+            </div>
+
+            <div class="news-card">
+                <img src="https://picsum.photos/id/237/400/300" alt="Apple Design">
+                <h3>Apple เลิกขายเคส FineWoven ถาวร</h3>
+                <p>หันไปใช้วัสดุ Aerogrid ใหม่ที่แข็งแรงและรักษ์โลก ทนรอยขีดข่วนได้ 100%</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2026 True News — สร้างโดย True Adam ด้วยความช่วยเหลือจาก Grok</p>
+    </footer>
+
+</body>
+</html>
